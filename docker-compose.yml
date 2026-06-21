@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: anime-recommender
+    ports:
+      - "8501:8501"
+    env_file:
+      - src/.env
+    restart: unless-stopped
